@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta para Michelle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffe6f2, #ffd9ec, #ffeef7);
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 40px;
+      border-radius: 25px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      font-size: 3rem;
+      color: #e04c91;
+      margin-bottom: 20px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    p {
+      line-height: 1.9;
+      font-size: 1.1rem;
+      color: #444;
+      animation: fadeUp 1.6s ease;
+      white-space: pre-line;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff77b7;
+      font-size: 18px;
+      animation: rise 7s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(100vh) scale(0.6); opacity: 0; }
+      20% { opacity: 0.8; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+
+    .music-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .song-message {
+      max-width: 520px;
+      font-size: 0.92rem;
+      color: #a03b6a;
+    }
+
+    button {
+      background: #ff62a3;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1rem;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    button:hover {
+      background: #ff2e87;
+      transform: scale(1.07);
+    }
+
+    /* Karaoke sincronizado */
+    .karaoke-box {
+      width: 100%;
+      max-width: 750px;
+      margin: 22px auto 0;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(255, 0, 100, 0.18);
+      text-align: center;
+    }
+
+    .line {
+      font-size: 1.25rem;
+      margin: 16px 0;
+      opacity: 0.25;
+      transition: opacity 0.35s ease;
+      position: relative;
+      display: inline-block;
+    }
+
+    .line.active {
+      opacity: 1;
+      color: #d6246e;
+      font-weight: 600;
+    }
+
+    .line.active .highlight {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(255,96,153,0.8), rgba(255,96,153,0));
+      z-index: -1;
+      animation: fill 4s linear forwards;
+    }
+
+    @keyframes fill {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+  <h1>Para Michelle ❤️</h1>
+
+  <p>A veces pienso en cómo empezó todo, en esa forma tan curiosa y bonita en la que nos encontramos, sin planearlo, como si la vida nos hubiera cruzado en el momento justo, aunque ninguno de los dos lo esperara. Desde esa primera llamada en la que conectamos de una manera que aún me cuesta explicar, todo cambió. Y aunque al principio todo era deseo, adrenalina y curiosidad, con el tiempo entendí que lo que realmente me atrapó de ti fue tu esencia. Esa manera tan tuya de ser reservada y al mismo tiempo auténtica, con una mezcla perfecta entre dulzura, risa y esa forma única de mostrar cariño, aunque a veces no dijeras mucho.
+
+Recuerdo perfectamente aquellas noches largas hablando hasta tarde, como si el mundo no existiera fuera de la llamada. Las escapadas, la emoción, los nervios cuando venías al apartamento, las risas entre silencios, los pequeños detalles que sin decirlo todo lo significaban. Y sobre todo, esa noche en la que me diste la mano por primera vez… no sé si te diste cuenta, pero todo mi cuerpo sintió algo especial. Fue como si por dentro algo me dijera: “esto sí vale la pena”.
+
+Con el tiempo fuimos compartiendo más que solo ganas o deseo. Empezamos a conocernos de verdad, y cada palabra, cada mirada, cada gesto tuyo se me fue quedando grabado. Uno de los recuerdos más lindos que tengo fue cuando me llevaste a conocer a tus primas. Quizá para ti fue algo natural, pero para mí fue muy significativo. Sentí que me dejabas entrar en una parte más íntima de tu vida, en ese pequeño círculo que uno no muestra a cualquiera. Fue lindo ver lo cercanos que son, lo divertidas que fueron esas salidas, y lo bien que la pasamos en la feria —tu prima intentando conocer a alguien, riéndose de sus propios descaches con tipos que nada que ver, y nosotros ahí, compartiendo todo con una complicidad que me hacía sentir afortunado.
+
+Y cómo olvidar esa salida al cine. Me reí después, porque me quedé dormido varias veces, lo admito, pero al mismo tiempo me daba igual. No importaba la película ni la historia, lo importante era estar contigo. Esos momentos sencillos, aunque parezcan pequeños, para mí significaron mucho. Porque cada vez que estaba contigo, incluso en silencio, sentía paz.
+
+A veces pienso que no fui el más expresivo, que quizá me guardé mucho para no agobiarte, porque sé que a veces las palabras pueden saturar. Pero créeme que todo el cariño que tengo por ti siempre lo quise demostrar de la forma más sincera y prudente posible. Quizá con gestos, con detalles pequeños, con esas palabras sueltas entre bromas, o simplemente estando ahí cada vez que podía, sin importar la hora ni el cansancio.
+
+Tú me hiciste vivir cosas que no pensé volver a sentir. Desde lo más tonto, como nuestras bromas y stickers sin sentido, hasta esos momentos serios donde abríamos el corazón sin miedo. Todo contigo fue un aprendizaje, una historia que no sé si el destino tenga escrita para largo, pero que sin duda siempre voy a guardar en lo más bonito de mi memoria.
+
+Me encanta pensar que nos conocimos justo así: sin máscaras, sin pretensiones, solo siendo nosotros. Y si la vida me diera otra oportunidad de conocerte, sin importar el lugar o la situación, te elegiría otra vez. Porque hay personas que simplemente dejan una huella, y tú, Michelle, eres una de ellas.
+
+Gracias por ser parte de mi historia, por cada instante compartido, por las risas, las miradas, las llamadas interminables y hasta los silencios.
+Gracias por dejarme sentir que, aunque el mundo sea incierto, aún existen conexiones reales, de esas que se sienten con el alma.
+
+Y quiero que sepas algo, Michelle: siempre estaré ahí para ti, sin importar el rumbo que tome la vida. Espero que el destino no nos separe, sino que, por el contrario, sea el inicio de una nueva historia donde podamos seguir escribiendo juntos los capítulos más bonitos.
+
+— Juan José</p>
+
+  <div class="music-btn">
+    <span class="song-message">Nunca había sentido de verdad las letras de la salsa… hasta que llegaste a mi vida. Hoy te dedico esta canción, porque cada palabra me recuerda a ti.</span>
+    <div class="player">
+      <button class="icon-btn" id="play-pause">▶️</button>
+      <input class="seek" id="seek" type="range" min="0" max="100" step="0.1" value="0" />
+      <span class="time" id="time-label">00:00 / 00:00</span>
+      <input class="volume" id="volume" type="range" min="0" max="1" step="0.01" value="0.8" />
+    </div>
+  </div>
+
+  <div class="karaoke-box">
+    <h3>Letra sincronizada</h3>
+    <div id="lyrics"></div>
+    <p style="font-size:0.95rem; opacity:0.8; margin-top:10px;">Busca por dentro 💖</p>
+  </div>
+</div>
+
+<audio id="bg-music" loop>
+  <source src="music.mp3" type="audio/mp3" />
+</audio>
+
+<script>
+  // corazones flotando
+  const hearts = document.getElementById('hearts');
+  for (let i = 0; i < 40; i++) {
+    let heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤️';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+    heart.style.fontSize = (14 + Math.random() * 20) + 'px';
+    hearts.appendChild(heart);
+  }
+
+  // música
+  let playing = false;
+  const music = document.getElementById('bg-music');
+  function toggleMusic() {
+    if (!playing) {
+      music.play();
+      playing = true;
+    } else {
+      music.pause();
+      playing = false;
+    }
+  }
+
+  const playBtn = document.getElementById('play-pause');
+  const seek = document.getElementById('seek');
+  const vol = document.getElementById('volume');
+  const time = document.getElementById('time-label');
+  vol.value = 0.8;
+  music.volume = 0.8;
+  function fmt(t) {
+    const m = Math.floor(t / 60);
+    const s = Math.floor(t % 60);
+    return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  }
+  function updateUI() {
+    if (!isNaN(music.duration) && isFinite(music.duration)) {
+      seek.value = (music.currentTime / music.duration) * 100;
+      time.textContent = fmt(music.currentTime) + ' / ' + fmt(music.duration);
+    }
+    playBtn.textContent = playing ? '⏸️' : '▶️';
+  }
+  music.addEventListener('timeupdate', updateUI);
+  music.addEventListener('loadedmetadata', updateUI);
+  playBtn.addEventListener('click', function () {
+    toggleMusic();
+    updateUI();
+  });
+  seek.addEventListener('input', function () {
+    if (!isNaN(music.duration) && isFinite(music.duration)) {
+      music.currentTime = (seek.value / 100) * music.duration;
+    }
+  });
+  vol.addEventListener('input', function () {
+    music.volume = vol.value;
+  });
+
+  // Karaoke: datos de la letra sincronizada
+  const lyricsData = [
+    { time: 0, text: "No sé decir te quiero, pero me entrego" },
+    { time: 5, text: "Pocas palabras al hablar, pero sincero" },
+    { time: 10, text: "Uno que otro defecto, eso lo acepto" },
+    { time: 16, text: "Quizás no el indicado, pero me ofrezco" },
+
+    { time: 22, text: "No soy el Sol que quema, pero caliento" },
+    { time: 28, text: "No sé de poesías, pero enternezco" },
+    { time: 33, text: "De pronto, un poco tosco, pero acaricio" },
+    { time: 38, text: "Y quererte a ti así, ese es mi vicio" },
+
+    { time: 43, text: "Busca por dentro" },
+    { time: 47, text: "Que pongo en juego todos mis sentimientos" },
+    { time: 52, text: "Un beso y un abrazo exacto en el momento" },
+    { time: 57, text: "Que me lo pidas, que me lo pidas" },
+
+    { time: 63, text: "Busca por dentro, amor" },
+    { time: 66, text: "Que hay una fuente inagotable de agua fresca" },
+    { time: 71, text: "Y una llama que no dejó nunca que se apague" },
+    { time: 78, text: "Y un corazón lleno de amor en mi equipaje" },
+
+    { time: 82, text: "Busca por dentro, amor" },
+    { time: 85, text: "Y llega, como yo, al total convencimiento" },
+    { time: 91, text: "Escampa tus dudas en mis adentros" },
+    { time: 96, text: "Que, de ternura, estoy hecho por dentro" },
+
+    { time: 114, text: "No sé lo que es ganar, pero lo intento" },
+    { time: 118, text: "Tal vez no arriesgo mucho, pero me atrevo" },
+    { time: 124, text: "Si no me determinan, desconozco" },
+    { time: 130, text: "Si me toca perder, lo reconozco" },
+
+    { time: 137, text: "Le tengo miedo al mar, pero navego" },
+    { time: 142, text: "Temo a la oscuridad, pero soporto" },
+    { time: 147, text: "Ante la soledad, yo me acongojo" },
+    { time: 152, text: "Y como todo ser que vive, río y lloro" },
+
+    { time: 157, text: "Busca por dentro" },
+    { time: 162, text: "Que pongo en juego todos mis sentimientos" },
+    { time: 167, text: "Un beso y un abrazo exacto en el momento" },
+    { time: 171, text: "Que me lo pidas, que me lo pidas" },
+
+    { time: 177, text: "Busca por dentro, amor" },
+    { time: 181, text: "Que hay una fuente inagotable de agua fresca" },
+    { time: 187, text: "Y una llama que no dejó nunca que se apague" },
+    { time: 192, text: "Y un corazón lleno de amor en mi equipaje" },
+
+    { time: 196, text: "Busca por dentro, amor" },
+    { time: 199, text: "Y llega, como yo, al total convencimiento" },
+    { time: 205, text: "Escampa tus dudas en mis adentros" },
+    { time: 211, text: "Que, de ternura, estoy hecho por dentro" },
+
+    { time: 231, text: "Busca en mis entrañas, busca un poco más" },
+    { time: 237, text: "Sin miedo a la oscuridad, que te esperaré" },
+
+    { time: 246, text: "Abrázame, entrégate a mí" },
+    { time: 250, text: "Que quiero compartir contigo toda la esencia" },
+    { time: 255, text: "Toda la esencia de este amor" },
+
+    { time: 259, text: "Busca en mis entrañas, busca un poco más" },
+    { time: 263, text: "Sin miedo a la oscuridad, que te esperaré" },
+    { time: 268, text: "..." }
+  ];
+
+  const lyricsDiv = document.getElementById('lyrics');
+  const lyricsOffset = 18;
+  let currentIndex = -1;
+  function renderLine(i) {
+    const t = lyricsData[i];
+    lyricsDiv.innerHTML = `<div class="line active"><span>${t.text}</span><div class="highlight"></div></div>`;
+    const h = lyricsDiv.querySelector('.highlight');
+    if (h) {
+      h.style.animation = 'none';
+      void h.offsetWidth;
+      h.style.animation = 'fill 4s linear forwards';
+    }
+  }
+
+  music.addEventListener('timeupdate', () => {
+    const c = Math.floor(music.currentTime);
+    for (let i = 0; i < lyricsData.length; i++) {
+      const start = lyricsData[i].time + lyricsOffset;
+      const end = (lyricsData[i + 1] ? lyricsData[i + 1].time : Infinity) + lyricsOffset;
+      if (c >= start && c < end) {
+        if (currentIndex !== i) {
+          currentIndex = i;
+          renderLine(i);
+        }
+        break;
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
